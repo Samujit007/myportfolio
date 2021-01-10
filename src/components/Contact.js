@@ -83,7 +83,7 @@ const Contact = () => {
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
-            <Typed strings={["Contect me"]} typeSpeed={40} />
+            <Typed strings={["Contact me"]} typeSpeed={40} />
           </Typography>
           <form onSubmit={sendEmail}>
               <InputField
@@ -118,7 +118,7 @@ const Contact = () => {
                 // onClick={(e)=>sendEmail(e)}
                 type = "submit"
               >
-                Contact Me
+                Send
               </Button>
            </form>
         </Box>
