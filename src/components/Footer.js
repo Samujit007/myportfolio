@@ -31,6 +31,7 @@ const Footer = () => {
       <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/>
       <BottomNavigationAction icon={<LinkedIn />} className={classes.root} href = "https://www.linkedin.com/in/samujit-das-311121138/" target = "_blank"/>
       <BottomNavigationAction icon={<GitHub />} className={classes.root} href = "https://github.com/Samujit007/" target = "_blank"/>
+      <BottomNavigationAction icon={<Instagram />} className={classes.root} href = "https://www.instagram.com/somujit007/" target = "_blank"/>
     </BottomNavigation>
   );
 };

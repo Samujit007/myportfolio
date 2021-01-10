@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typed from "react-typed";
+import emailjs from 'emailjs-com';
 
 import Send from "@material-ui/icons/Send";
 
@@ -62,48 +63,80 @@ const InputField = withStyles({
   },
 })(TextField);
 
+function sendEmail(e) {
+  console.log(e.target)
+  e.preventDefault();
+
+    emailjs.sendForm('service_g7eacol', 'template_dsn1uc7', e.target, 'user_7tDfUUA865lLGaoVs5VRX')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+}
+
 const Contact = () => {
   const classes = useStyles();
-  return (
+   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
             <Typed strings={["Contect me"]} typeSpeed={40} />
           </Typography>
-          <InputField
-            fullWidth={true}
-            label="Name"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-          />
-          <InputField
-            fullWidth={true}
-            label="Email"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-            className={classes.field}
-          />
-          <InputField
-            fullWidth={true}
-            label="Message"
-            variant="outlined"
-            multiline
-            rows={4}
-            inputProps={{ className: classes.input }}
-          />
-          <Button
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<Send />}
-            className={classes.button}
-          >
-            Contact Me
-          </Button>
+          <form onSubmit={sendEmail}>
+              <InputField
+                fullWidth={true}
+                label="Name"
+                variant="outlined"
+                inputProps={{ className: classes.input }}
+                name = "name"
+              />
+              <InputField
+                fullWidth={true}
+                label="Email"
+                variant="outlined"
+                inputProps={{ className: classes.input }}
+                className={classes.field}
+                name = "email"
+              />
+              <InputField
+                fullWidth={true}
+                label="Message"
+                variant="outlined"
+                multiline
+                rows={4}
+                inputProps={{ className: classes.input }}
+                name = "message"
+              />
+              <Button
+                variant="outlined"
+                fullWidth={true}
+                endIcon={<Send />}
+                className={classes.button}
+                // onClick={(e)=>sendEmail(e)}
+                type = "submit"
+              >
+                Contact Me
+              </Button>
+           </form>
         </Box>
       </Grid>
     </Box>
   );
+  // return (
+  //   <form className="contact-form" onSubmit={sendEmail}>
+  //     <input type="hidden" name="contact_number" />
+  //     <label>Name</label>
+  //     <input type="text" name="name" />
+  //     <label>Email</label>
+  //     <input type="email" name="email" />
+  //     <label>Message</label>
+  //     <textarea name="message" />
+  //     <input type="submit" value="Send" />
+  //   </form>
+  // );
 };
 
 export default Contact;

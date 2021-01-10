@@ -19,6 +19,9 @@ import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../sam.jpg";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import Facebook from "@material-ui/icons/Facebook";
+
 
 import Footer from "../components/Footer";
 
@@ -34,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     color: "tan",
   },
   menuSliderContainer: {
-    width: 250,
+    width: 320,
     background: "#511",
     height: "100%",
   },
@@ -46,6 +49,15 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     color: "tan",
+  },
+  root: {
+    "& .MuiSvgIcon-root": {
+      fill: "tan",
+      "&:hover": {
+        fill: "tomato",
+        fontSize: "1.8rem",
+      },
+    },
   },
 }));
 
@@ -93,9 +105,11 @@ const Navbar = () => {
             <IconButton onClick={() => setOpen(true)}>
               <ArrowBack className={classes.arrow} />
             </IconButton>
-            <Typography variant="h5" className={classes.title}>
+            <Typography variant="h5" className={classes.title} onClick={() => setOpen(true)}>
               Portfolio
             </Typography>
+            {/* <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/>
+            <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/> */}
           </Toolbar>
         </AppBar>
       </Box>
