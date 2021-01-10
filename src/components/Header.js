@@ -65,7 +65,7 @@ const Header = () => {
       
     </Box>
       {/* <Drawer> */}
-        <Footer className = {classes.footer}/>
+        {/* <Footer className = {classes.footer}/> */}
       {/* </Drawer> */}
     </React.Fragment>
   );
