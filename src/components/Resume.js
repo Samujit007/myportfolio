@@ -165,7 +165,7 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             Working with a team to built a client side application which can visualize raw data into charts and grids. Designed multilevel drill down 
-            methods for better experience.   
+            methods for better experience   
           </Typography>
         </Box>
         <Typography
@@ -191,8 +191,8 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             Worked in an internal modeling tool called CORE, which can produce statistical results in the form of CSV and then can be forwarded
-            to the client side. Solely responsible for service(.Net) and database(SSMS) part of the project. Alongside I have written 
-            microservices in Django 
+            to the client side. Solely responsible for service(.Net) and database(SSMS) part of the project. I have written 
+            microservices in Django alongside
           </Typography>
         </Box>
       </Box>
