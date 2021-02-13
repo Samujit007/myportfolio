@@ -195,6 +195,33 @@ const Resume = () => {
             microservices in Django alongside
           </Typography>
         </Box>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2021
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+            Fullstack Developer
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            IPSOS MMA
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            className={classes.subtitle1}
+          >
+            Contributed to an internal tool called MPower. This is a web based learning platform about the organization, tools and technologies 
+            dedicated to the organization, lastly user can give assessment and get awarded for best scorer. Responsible for SSMS/Store procedures
+            and server code(express js)
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
