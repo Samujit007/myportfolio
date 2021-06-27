@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -7,7 +7,8 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typed from "react-typed";
 import emailjs from 'emailjs-com';
-
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 import Send from "@material-ui/icons/Send";
 
 const useStyles = makeStyles((theme) => ({
@@ -63,20 +64,44 @@ const InputField = withStyles({
   },
 })(TextField);
 
-function sendEmail(e) {
-  console.log(e.target)
-  e.preventDefault();
 
-    emailjs.sendForm('service_g7eacol', 'template_dsn1uc7', e.target, 'user_7tDfUUA865lLGaoVs5VRX')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
-}
 
 const Contact = () => {
+  const [email, setMail] = useState("");
+  const [open, setOpen] = useState(false);
+  const [msg, setMsg] = useState(<div/>);
+  function updateMail(e) {
+    setMail(e.target.value)
+  }
+  
+  function sendEmail(e) {
+    e.preventDefault();
+    var checkEmailPattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+
+    if (!checkEmailPattern.test(email)) {
+      
+      onOpenModal()
+      setMsg(<div>Please enter <br/>
+                valid email address 
+            </div>)
+  
+    }else{
+      emailjs.sendForm('service_g7eacol', 'template_dsn1uc7', e.target, 'user_7tDfUUA865lLGaoVs5VRX')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+        onOpenModal()
+        setMsg(<div>Mail <br/>
+          sent successfully 
+      </div>)
+      }
+      
+  }
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   const classes = useStyles();
    return (
     <Box component="div" className={classes.contactContainer}>
@@ -100,6 +125,8 @@ const Contact = () => {
                 inputProps={{ className: classes.input }}
                 className={classes.field}
                 name = "email"
+                value={email} 
+                onChange={updateMail}
               />
               <InputField
                 fullWidth={true}
@@ -123,6 +150,10 @@ const Contact = () => {
            </form>
         </Box>
       </Grid>
+      
+      <Modal open={open} onClose={onCloseModal}>
+        {msg}
+      </Modal>
     </Box>
   );
   // return (
