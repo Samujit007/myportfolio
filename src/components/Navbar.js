@@ -21,7 +21,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../sam.jpg";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
-
+import Skills from '@material-ui/icons/CloudDone';
 
 import Footer from "../components/Footer";
 
@@ -65,8 +65,10 @@ const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
   { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <Skills />, listText: "Skills", listPath: "/skills" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
-];
+];  
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
