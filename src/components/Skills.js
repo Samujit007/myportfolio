@@ -33,35 +33,12 @@ const projects = [
     link:"https://youtu.be/XFzbcaXI09M"
   },
   {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
+    name: "Medieval",
+    description: `Medieval, build in Unreal 4`,
     image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
+    link:"https://youtu.be/q_ElxKragWg"
   },
-  {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
-    image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
-  },
-  {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
-    image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
-  },
-  {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
-    image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
-  },
-  {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
-    image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
-  }
+  
 ];
 
 const Skills = () => {
