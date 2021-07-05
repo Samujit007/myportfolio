@@ -126,8 +126,8 @@ const Navbar = () => {
             <Typography variant="h5" className={classes.title} onClick={() => arrowOpen()}>
               Portfolio
             </Typography>
-            <div style={{position:'absolute', right:'30px', cursor:"pointer"}} onClick={() => getNoti()}>
-              <NotificationsActiveIcon/>
+            <div style={{position:'absolute', right:'30px', cursor:"pointer"}}>
+              <NotificationsActiveIcon onClick={() => getNoti()}/>
               <a href='Resume.pdf' target = 'blank' style={{marginLeft:"15px", color:"tan"}}>
               <PictureAsPdfIcon/>
               </a>
