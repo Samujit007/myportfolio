@@ -30,15 +30,23 @@ const projects = [
     name: "Terrain in Unity",
     description: `Basic terrain build in Unity 3D`,
     image: project1,
-    link:"https://youtu.be/XFzbcaXI09M"
+    link:"https://youtu.be/XFzbcaXI09M",
+    skills:['Unity3d']
   },
   {
     name: "Medieval",
     description: `Medieval, build in Unreal 4`,
     image: project1,
-    link:"https://youtu.be/q_ElxKragWg"
+    link:"https://youtu.be/q_ElxKragWg",
+    skills:['Unreal Engine 4', 'Quixel']
   },
-  
+  {
+    name: "Medieval + Main Menu & Pause Menu",
+    description: `Medieval, build in Unreal 4`,
+    image: project1,
+    link:"https://youtu.be/W_T8piASsdw",
+    skills:['Unreal Engine 4', 'Quixel']
+  },
 ];
 
 const Skills = () => {
@@ -51,7 +59,9 @@ const Skills = () => {
         {/* Projects */}
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
-            <Card className={classes.cardContainer}>
+            <div>
+              <Card className={classes.cardContainer}>
+              
               <CardActionArea>
                 <ReactPlayer 
                   className = "react-player"
@@ -62,6 +72,7 @@ const Skills = () => {
                 />
                 
               </CardActionArea> 
+             
               {/* <CardActions>
                 <Button size="small" color="primary">
                   Share
@@ -71,6 +82,10 @@ const Skills = () => {
                 </Button> */}
               {/* </CardActions> */}
             </Card>
+              <div style={{color:'white', paddingLeft:'150px'}}><div style={{display:"flex"}}>
+                <div style={{display:"flex", fontWeight:"bold", color:"tan"}}>Skills: </div>{project.skills.join(', ')}</div>
+                </div>
+              </div>
           </Grid>
         ))}
       </Grid>
