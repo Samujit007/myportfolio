@@ -128,7 +128,7 @@ const Navbar = () => {
             </Typography>
             <div style={{position:'absolute', right:'30px', cursor:"pointer"}} onClick={() => getNoti()}>
               <NotificationsActiveIcon/>
-              <a href='Resume.pdf' target = 'blank' style={{marginLeft:"15px"}}>
+              <a href='Resume.pdf' target = 'blank' style={{marginLeft:"15px", color:"tan"}}>
               <PictureAsPdfIcon/>
               </a>
             </div>
