@@ -26,7 +26,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import { Route, Switch } from "react-router-dom";
 import SkillsComponent from "./Skills";
 import Index from "./";
-
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import Footer from "../components/Footer";
 
 const useStyles = makeStyles((theme) => ({
@@ -128,6 +128,9 @@ const Navbar = () => {
             </Typography>
             <div style={{position:'absolute', right:'30px', cursor:"pointer"}} onClick={() => getNoti()}>
               <NotificationsActiveIcon/>
+              <a href='Resume.pdf' target = 'blank' style={{marginLeft:"15px"}}>
+              <PictureAsPdfIcon/>
+              </a>
             </div>
             {/* <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/>
             <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/> */}
