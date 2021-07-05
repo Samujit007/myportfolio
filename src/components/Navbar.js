@@ -22,6 +22,10 @@ import avatar from "../sam.jpg";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import Skills from '@material-ui/icons/CloudDone';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+import { Route, Switch } from "react-router-dom";
+import SkillsComponent from "./Skills";
+import Index from "./";
 
 import Footer from "../components/Footer";
 
@@ -72,8 +76,21 @@ const menuItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const [noti, setnoti] = useState(false);
+  const [isPage, setIsPage] = useState(false);
   const classes = useStyles();
+  const getNoti=()=>{
+    setnoti(!noti)
+  }
+  const arrowOpen=()=>{
+    setnoti(false)
+    setOpen(true)
+  }
+  const pageOpen=(param)=>{
+    setOpen(false)
+    if(param!="Home") setIsPage(true)
+    else setIsPage(false)
+  }
 
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
@@ -85,7 +102,7 @@ const Navbar = () => {
             button
             key={i}
             className={classes.listItem}
-            onClick={() => setOpen(false)}
+            onClick={() => pageOpen(item.listText)}
             component={Link}
             to={item.listPath}
           >
@@ -98,18 +115,20 @@ const Navbar = () => {
       </List>
     </Box>
   );
-
   return (
     <React.Fragment>
       <Box component="nav">
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
+            <IconButton onClick={() => arrowOpen()}>
               <ArrowBack className={classes.arrow} />
             </IconButton>
-            <Typography variant="h5" className={classes.title} onClick={() => setOpen(true)}>
+            <Typography variant="h5" className={classes.title} onClick={() => arrowOpen()}>
               Portfolio
             </Typography>
+            <div style={{position:'absolute', right:'30px', cursor:"pointer"}} onClick={() => getNoti()}>
+              <NotificationsActiveIcon/>
+            </div>
             {/* <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/>
             <BottomNavigationAction icon={<Facebook />} className={classes.root} href = "https://www.facebook.com/somujit.das" target = "_blank"/> */}
           </Toolbar>
@@ -119,6 +138,9 @@ const Navbar = () => {
         {sideList()}
         <Footer />
       </Drawer>
+      { !isPage && noti ? 
+        <SkillsComponent/>
+      : null}   
     </React.Fragment>
   );
 };
