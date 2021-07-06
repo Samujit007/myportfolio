@@ -86,7 +86,7 @@ const Header = () => {
   };
   return (
     <React.Fragment>
-      <div style={{position:"absolute",bottom:'25%', left:'50%'}}>
+      <div style={{position:"absolute",bottom:'20%', left:'50%'}}>
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="Samujit Das" size="100" round={true} />
