@@ -1,7 +1,26 @@
+
 body {
   background: url(main1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.slider{
+  width: 50%;
+  margin: 10rem auto;
+  height:300px;
+}
+.slide img{
+  width: 20rem;
+  margin: 0 auto;
+} 
+.slide{
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: .5;
+}
+.activeSlide{
+  transform: scale(.5);
+  opacity: 1;
 }
