@@ -23,7 +23,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import Skills from '@material-ui/icons/CloudDone';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import SkillsComponent from "./Skills";
 import Index from "./";
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
@@ -117,6 +117,7 @@ const Navbar = () => {
   );
   return (
     <React.Fragment>
+      <>
       <Box component="nav">
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
@@ -127,7 +128,7 @@ const Navbar = () => {
               Portfolio
             </Typography>
             <div style={{position:'absolute', right:'30px', cursor:"pointer"}}>
-              <NotificationsActiveIcon onClick={() => getNoti()}/>
+              <Link to="/Skills"><NotificationsActiveIcon/></Link>
               <a href='Resume.pdf' target = 'blank' style={{marginLeft:"15px", color:"tan"}}>
               <PictureAsPdfIcon/>
               </a>
@@ -141,9 +142,7 @@ const Navbar = () => {
         {sideList()}
         <Footer />
       </Drawer>
-      { !isPage && noti ? 
-        <SkillsComponent/>
-      : null}   
+      </>
     </React.Fragment>
   );
 };
