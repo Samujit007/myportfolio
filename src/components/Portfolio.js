@@ -10,8 +10,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import project1 from "../images/activate.PNG";
-import project2 from "../images/core.jpg";
+import Activate from "../images/activate.PNG";
+import Core from "../images/core.jpg";
+import NoLogo from "../images/No_logo.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -27,13 +28,18 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   {
     name: "Activate",
-    description: `Real-time marketing simulation and optimization`,
-    image: project1,
+    description: `Realtime Marketing Simulation And Optimization`,
+    image: Activate,
   },
   {
     name: "Core",
-    description: `Unified modeling platform`,
-    image: project2,
+    description: `Unified Modeling Tool`,
+    image: Core,
+  },
+  {
+    name: "MPower",
+    description: `Learing and Assessment Platform`,
+    image: NoLogo,
   },
   // {
   //   name: "Project 3",
