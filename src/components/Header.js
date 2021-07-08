@@ -20,6 +20,7 @@ import UnityIcon from "../images/Unity_1.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
+import Particles from "./Particles";
 
 const img = [CSharpIcon, ReactIcon, SQLIcon, PythonIcon, UnityIcon, UnrealIcon]
 
@@ -88,6 +89,7 @@ const Header = () => {
     <React.Fragment>
       <div style={{position:"absolute",top:'30%', left:'50%'}}>
     <Box className={classes.typedContainer}>
+      <Particles/>
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="Samujit Das" size="100" round={true} />
       </Grid>
@@ -113,6 +115,7 @@ const Header = () => {
         {/* <Footer className = {classes.footer}/> */}
       {/* </Drawer> */}
       <div style={{marginTop:"18%"}}>
+      <Particles/>
       <Slider className="slider" {...settings}>
         {
           img.map((a,i)=>(
