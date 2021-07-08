@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
-import avatar from "../sam.jpg";
+import avatar from "../images/sam.jpg"
 import Footer from "../components/Footer";
 import { Drawer } from "@material-ui/core";
 import Slider from "react-slick";
@@ -86,7 +86,7 @@ const Header = () => {
   };
   return (
     <React.Fragment>
-      <div style={{position:"absolute",bottom:'20%', left:'50%'}}>
+      <div style={{position:"absolute",top:'30%', left:'50%'}}>
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="Samujit Das" size="100" round={true} />
@@ -112,7 +112,7 @@ const Header = () => {
       {/* <Drawer> */}
         {/* <Footer className = {classes.footer}/> */}
       {/* </Drawer> */}
-      <div >
+      <div style={{marginTop:"18%"}}>
       <Slider className="slider" {...settings}>
         {
           img.map((a,i)=>(
