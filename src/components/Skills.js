@@ -27,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Terrain in Unity",
-    description: `Basic terrain build in Unity 3D`,
+    name: "Tropical Beach",
+    description: `Tropical Beach made with Unreal Engine 4 and Quixel`,
     image: project1,
-    link:"https://youtu.be/XFzbcaXI09M",
-    skills:['Unity3d']
+    link:"https://youtu.be/EhSEqF2TsV0",
+    skills:['Unreal Engine 4', 'Quixel']
   },
   {
     name: "Medieval",
@@ -47,6 +47,14 @@ const projects = [
     link:"https://youtu.be/W_T8piASsdw",
     skills:['Unreal Engine 4', 'Quixel']
   },
+  {
+    name: "Terrain in Unity",
+    description: `Basic terrain build in Unity 3D`,
+    image: project1,
+    link:"https://youtu.be/XFzbcaXI09M",
+    skills:['Unity3d']
+  },
+  
 ];
 
 const Skills = () => {
