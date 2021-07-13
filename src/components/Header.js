@@ -17,6 +17,7 @@ import SQLIcon from "../images/SQL_1.png"
 import PythonIcon from "../images/Python_1.png"
 import UnrealIcon from "../images/Unreal_1.png"
 import UnityIcon from "../images/Unity_1.png"
+import PostgresqlIcon from "../images/postgresql.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'

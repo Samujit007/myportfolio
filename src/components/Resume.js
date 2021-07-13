@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Typed from "react-typed";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -114,7 +115,7 @@ const Resume = () => {
   return (
     <Box component="header" className={classes.mainContainer}>
       <Typography variant="h4" align="center" className={classes.heading}>
-        Working Experience
+        <Typed strings={[" Working Experience"]} typeSpeed={40} />
       </Typography>
       <Box component="div" className={classes.timeLine}>
         <Typography
@@ -132,14 +133,14 @@ const Resume = () => {
             Senior Associate
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            WIPRO
+            WIPRO {'>'} Internal Tools
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Helping business by providing technical support with the network devices for internal clients
+            Helping business by providing technical support with the network devices for internal clients.
           </Typography>
         </Box>
         <Typography
@@ -157,7 +158,7 @@ const Resume = () => {
             React JS developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            IPSOS MMA
+            IPSOS MMA {'>'}  JavaScript, React JS
           </Typography>
           <Typography
             variant="subtitle1"
@@ -165,7 +166,7 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             Working with a team to built a client side application which can visualize raw data into charts and grids. Designed multilevel drill down 
-            methods for better experience   
+            methods for better experience.   
           </Typography>
         </Box>
         <Typography
@@ -183,16 +184,15 @@ const Resume = () => {
             Fullstack Developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            IPSOS MMA
+            IPSOS MMA {'>'} ASP.NET, SSMS, React JS, Django
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Worked in an internal modeling tool called CORE, which can produce statistical results in the form of CSV and then can be forwarded
-            to the client side. Solely responsible for service(.Net) and database(SSMS) part of the project. I have written 
-            microservices in Django alongside
+            Worked in an internal modeling tool called CORE, which can produce statistical results by predictive analysis using Python Django framework. Solely responsible for service(.Net) and database(SSMS) part of the project. I have written 
+            microservices in Django alongside.
           </Typography>
         </Box>
         <Typography
@@ -210,7 +210,7 @@ const Resume = () => {
             Fullstack Developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            IPSOS MMA
+            IPSOS MMA {'>'} SSMS, Express.js. React JS
           </Typography>
           <Typography
             variant="subtitle1"
@@ -219,7 +219,7 @@ const Resume = () => {
           >
             Contributed to an internal tool called MPower. This is a web based learning platform about the organization, tools and technologies 
             dedicated to the organization, lastly user can give assessment and get awarded for best scorer. Responsible for SSMS/Store procedures
-            and server code(express js)
+            and server code(express js).
           </Typography>
         </Box>
       </Box>

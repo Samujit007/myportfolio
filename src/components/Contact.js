@@ -10,7 +10,7 @@ import emailjs from 'emailjs-com';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import Send from "@material-ui/icons/Send";
-
+const about = ["Hi, I'm Samujit","E2E Web Developer, I specialize in backend development", "Game design is My passion"]
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     background: "#233",
@@ -39,6 +39,14 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "1rem 0rem",
   },
+  about:{
+    position:"absolute",
+    top: "30%",
+    color: "tan",
+    left: "50%",
+    margin: "-100px 0 0 -208px",
+    textAlign: "center",
+  }
 }));
 
 const InputField = withStyles({
@@ -154,6 +162,16 @@ const Contact = () => {
       <Modal open={open} onClose={onCloseModal}>
         {msg}
       </Modal>
+      <div className={classes.about}>
+        {about.map(a=>(
+            <Typography>
+              <Typed strings={[a]} typeSpeed={40}/>
+            </Typography>  
+        ))}
+        {/* Hi, I'm Samujit<br/>
+        E2E Web Developer, I specialize in backend development<br/>
+        Game design is My passion */}
+      </div>
     </Box>
   );
   // return (
