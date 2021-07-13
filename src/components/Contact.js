@@ -10,7 +10,7 @@ import emailjs from 'emailjs-com';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import Send from "@material-ui/icons/Send";
-const about = ["Hi, I'm Samujit","E2E Web Developer, I specialize in backend development", "Game design is My passion"]
+const about = ["Hi, I'm Samujit","E2E web developer, I specialize in backend development", "Game design is my passion"]
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     background: "#233",
