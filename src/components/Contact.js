@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   form: {
-    top: "50%",
+    top: "60%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     position: "absolute",
@@ -113,6 +113,16 @@ const Contact = () => {
   const classes = useStyles();
    return (
     <Box component="div" className={classes.contactContainer}>
+      <div className={classes.about}>
+        {about.map(a=>(
+            <Typography>
+              <Typed strings={[a]} typeSpeed={40}/>
+            </Typography>  
+        ))}
+        {/* Hi, I'm Samujit<br/>
+        E2E Web Developer, I specialize in backend development<br/>
+        Game design is My passion */}
+      </div>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
@@ -162,16 +172,7 @@ const Contact = () => {
       <Modal open={open} onClose={onCloseModal}>
         {msg}
       </Modal>
-      <div className={classes.about}>
-        {about.map(a=>(
-            <Typography>
-              <Typed strings={[a]} typeSpeed={40}/>
-            </Typography>  
-        ))}
-        {/* Hi, I'm Samujit<br/>
-        E2E Web Developer, I specialize in backend development<br/>
-        Game design is My passion */}
-      </div>
+      
     </Box>
   );
   // return (
