@@ -18,12 +18,13 @@ import PythonIcon from "../images/Python_1.png"
 import UnrealIcon from "../images/Unreal_1.png"
 import UnityIcon from "../images/Unity_1.png"
 import PostgresqlIcon from "../images/postgresql.png"
+import JiraIcon from "../images/Jira.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
 import Particles from "./Particles";
 
-const img = [CSharpIcon, ReactIcon, SQLIcon, PythonIcon, UnityIcon, UnrealIcon]
+const img = [CSharpIcon, ReactIcon, SQLIcon, PythonIcon, JiraIcon, UnityIcon, UnrealIcon]
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
