@@ -28,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   {
     name: "Tropical Beach",
+    description: `Tropical Beach in UE4 and Quixel`,
+    image: project1,
+    link:"https://youtu.be/wipG-SMp5tY",
+    skills:['Unreal Engine 4', 'Quixel']
+  },
+  {
+    name: "Tropical Beach",
     description: `Tropical Beach made with Unreal Engine 4 and Quixel`,
     image: project1,
     link:"https://youtu.be/EhSEqF2TsV0",
